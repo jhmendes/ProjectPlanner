@@ -1,1 +1,22 @@
-<!-- project details listed here -->
+<h1><%= @project.name %></h1>
+
+<h2>Description:</h2>
+<p><%= @project.description %></p>
+
+<h2>Members:</h2>
+
+<uL>
+<% @members.each do |member| %>
+  <li><%= member.first_name %> <%= member.last_name %></li>
+  <% end %>
+</ul>
+
+
+<h2>Tasks:</h2>
+
+<uL>
+<% @tasks.each do |task| %>
+  <li><%= task.name %> Assigned To: <%= task.user.first_name %> <%= task.user.last_name %></li>
+  <!--  can't seem to figure out how to call the members first and last name for the task-->
+  <% end %>
+</ul>

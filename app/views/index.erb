@@ -1,1 +1,9 @@
 <!-- all projects listed here -->
+<h1>Projects</h1>
+<ul>
+
+<% @projects.each do |project| %>
+  <li><a href= "/projects/<%= project.id %>"><%= project.name %></a></li>
+<% end %>
+
+</ul>
